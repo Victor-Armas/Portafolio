@@ -28,7 +28,7 @@ export default function FallingStarsBackground() {
       return { width, height };
     };
 
-    let { width, height } = updateCanvasSize();
+    const { width, height } = updateCanvasSize();
 
     // Creamos un arreglo de estrellas con posición, tamaño y opacidad aleatoria
     const stars: Star[] = [];
