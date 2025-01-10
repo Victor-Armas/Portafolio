@@ -12,14 +12,14 @@ export default function Proyects() {
       title: "Sistema de Recibo",
       images: ["/projects/crud/crud_1.png", "/projects/crud/crud_2.png", "/projects/crud/crud_3.png", "/projects/crud/crud_4.png", "/projects/crud/crud_5.png", "/projects/crud/crud_6.png"],
       demoLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/Victor-Armas/Boarding-System-Next",
     },
     {
       id: 2,
       title: "UpTask",
       images: ["/projects/uptask/uptask_1.png", "/projects/uptask/uptask_2.png"],
       demoLink: "",
-      codeLink: "#",
+      codeLink: "https://github.com/Victor-Armas/UpTask_BackEnd",
     },
     {
       id: 3,

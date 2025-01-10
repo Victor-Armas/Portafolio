@@ -1,31 +1,51 @@
 import Abouth from "@/components/Abouth";
 import Contact from "@/components/Contact";
 import FallingStarsBackground from "@/components/FallingStarsBackground";
+import Navbar from "@/components/NavBar";
 import Proyects from "@/components/Proyects";
 import Skills from "@/components/Skills";
 import SocialSidebar from "@/components/SocialSidebar";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    {/* Fondo de estrellas cayendo */}
-    <FallingStarsBackground />
+      {/* Fondo de estrellas cayendo */}
+      <FallingStarsBackground />
 
-     {/* social*/}
-     <SocialSidebar />
+      {/* social*/}
+      <SocialSidebar />
 
+      <Navbar />
 
-      <header className="text-neutral-400 font-bold uppercase flex flex-row justify-center gap-16 py-7 text-lg bg-zinc-800">
-        <a className="hover:text-neutral-100 transition-all" href="#about">Sobre Mí</a>
-        <a className="hover:text-neutral-100 transition-all" href="#projects">Mis Proyectos</a>
-        <a className="hover:text-neutral-100 transition-all" href="#contact">Contacto</a>
-      </header>
-
-      <main className=" mx-auto">
+      <main className="mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* PARTE PRINCIPAL */}
-        <section className="flex justify-center items-center h-screen">
-          <img src="/images/Foto.png" alt="Foto Victor" />
+        <section className="flex flex-col md:flex-row justify-center items-center h-screen">
+          {/* Imagen para pantallas grandes y medianas */}
+          <div className="hidden md:block relative w-96 h-96">
+            <Image
+              src="/images/Foto.png"  // Imagen para pantallas medianas y grandes
+              alt="Foto Victor"
+              layout="responsive"
+              width={384}
+              height={384}
+              className="object-contain mb-8 md:mb-0 md:mr-8 pr-10"
+            />
+          </div>
+
+          {/* Imagen para pantallas pequeñas (móviles) */}
+          <div className="md:hidden relative w-36">
+            <Image
+              src="/images/Foto2.png"  // Imagen para pantallas pequeñas
+              alt="Foto Victor"
+              layout="responsive"
+              width={384}
+              height={384}
+              className="object-contain mb-8 md:mb-0 md:mr-8"
+            />
+          </div>
+
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h1 className="text-white text-4xl font-semibold">
               Yo soy <span className="text-cyan-400 font-extrabold text-7xl">Victor Armas</span>
@@ -35,25 +55,26 @@ export default function Home() {
             <div className="flex justify-center md:justify-start">
               <a
                 className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 focus:ring-4 focus:ring-cyan-300 focus:outline-none"
-                href="#"
+                href="#contact"
               >
                 Hablemos 🚀
               </a>
             </div>
           </div>
         </section>
-        
+
+
         {/* SECCION SOBRE MI */}
-        <Abouth/>
+        <Abouth />
 
         {/* SKILLS */}
-        <Skills/>
+        <Skills />
 
         {/* PROYECTOS */}
-        <Proyects/> 
+        <Proyects />
 
         {/* Contacto */}
-        <Contact/> 
+        <Contact />
       </main>
     </>
   );
