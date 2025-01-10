@@ -9,7 +9,7 @@ export default function Contact() {
         },
         {
             name: "LinkedIn",
-            url: "https://linkedin.com/in/tuusuario",
+            url: "https://linkedin.com/in/victorarmas961004",
             icon: "/logos/linkedin.webp",
         },
         {

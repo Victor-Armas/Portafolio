@@ -4,7 +4,7 @@ export default function SocialSidebar() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://www.linkedin.com/in/victorarmas961004/",
+      url: "http://linkedin.com/in/victorarmas961004",
       icon: "/logos/gitHub.jpg", // Reemplaza con la ruta de tus íconos
     },
     {
