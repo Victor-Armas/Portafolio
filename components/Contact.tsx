@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Contact() {
     const socialLinks = [
         {
@@ -45,7 +47,13 @@ export default function Contact() {
                                 className="flex flex-col items-center hover:text-cyan-400 transition-all"
                             >
                                 <div className="w-14 h-14 flex items-center justify-center bg-[#2c2d31] rounded-full mb-2 hover:bg-cyan-400 transition-all">
-                                    <img src={link.icon} alt={link.name} className="w-8 h-8" />
+                                    <Image
+                                        src={link.icon}
+                                        alt={link.name}
+                                        width={32} // Corresponde a la clase w-8 (8 * 4 = 32 px)
+                                        height={32} // Corresponde a la clase h-8
+                                        className="object-contain" // Preserva el diseño ajustando el contenido
+                                    />
                                 </div>
                                 <span className="text-sm">{link.name}</span>
                             </a>

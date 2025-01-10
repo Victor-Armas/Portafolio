@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image' // Import Image from next/image
 
 const logos = [
     { src: "/logos/css.png", name: "CSS" },
@@ -13,7 +14,6 @@ const logos = [
     { src: "/logos/typescript.webp", name: "TypeScript" },
 ];
 
-
 export default function Skills() {
     return (
         <section className="mt-28">
@@ -26,10 +26,12 @@ export default function Skills() {
                             key={index}
                             className="bg-[#3c3d41] p-6 rounded-lg shadow-md flex flex-col items-center hover:scale-105 hover:bg-cyan-500 transition-all duration-500"
                         >
-                            <img
+                            <Image
                                 src={logo.src}
                                 alt={logo.name}
-                                className="w-16 h-16 sm:w-20 sm:h-20 object-contain mb-4"
+                                width={80} // Use width and height properties
+                                height={80} 
+                                className="object-contain mb-4"
                             />
                             <p className="text-white text-xl font-semibold">{logo.name}</p>
                         </div>
@@ -43,10 +45,12 @@ export default function Skills() {
                             key={index}
                             className="bg-[#3c3d41] p-6 rounded-lg shadow-md flex flex-col items-center hover:scale-105 hover:bg-cyan-500 transition-all duration-500"
                         >
-                            <img
+                            <Image
                                 src={logo.src}
                                 alt={logo.name}
-                                className="w-16 h-16 sm:w-20 sm:h-20 object-contain mb-4"
+                                width={80} // Use width and height properties
+                                height={80} 
+                                className="object-contain mb-4"
                             />
                             <p className="text-white text-xl font-semibold">{logo.name}</p>
                         </div>
@@ -60,10 +64,12 @@ export default function Skills() {
                             key={index}
                             className="bg-[#3c3d41] p-6 rounded-lg shadow-md flex flex-col items-center hover:scale-105 hover:bg-cyan-500 transition-all duration-500"
                         >
-                            <img
+                            <Image
                                 src={logo.src}
                                 alt={logo.name}
-                                className="w-16 h-16 sm:w-20 sm:h-20 object-contain mb-4"
+                                width={80} // Use width and height properties
+                                height={80} 
+                                className="object-contain mb-4"
                             />
                             <p className="text-white text-xl font-semibold">{logo.name}</p>
                         </div>
@@ -71,6 +77,5 @@ export default function Skills() {
                 </div>
             </div>
         </section>
-
     )
 }
