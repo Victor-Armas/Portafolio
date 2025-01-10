@@ -19,7 +19,7 @@ export default function Contact() {
         },
         {
             name: "81-3528-5338",
-            url: "#contact",
+            url: "tel:+528135285338",
             icon: "/logos/telefono.webp",
         },
     ];
