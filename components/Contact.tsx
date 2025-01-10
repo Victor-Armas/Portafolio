@@ -14,7 +14,7 @@ export default function Contact() {
         },
         {
             name: "Email",
-            url: "mailto:tuemail@example.com",
+            url: "mailto:victor.961004@outlook.com",
             icon: "/logos/email.svg",
         },
         {

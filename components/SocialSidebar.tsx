@@ -4,17 +4,17 @@ export default function SocialSidebar() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "http://linkedin.com/in/victorarmas961004",
+      url: "https://github.com/Victor-Armas",
       icon: "/logos/gitHub.jpg", // Reemplaza con la ruta de tus íconos
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/tuusuario",
+      url: "http://linkedin.com/in/victorarmas961004",
       icon: "/logos/linkedin.webp",
     },
     {
       name: "Email",
-      url: "mailto:tuemail@example.com",
+      url: "mailto:victor.961004@outlook.com",
       icon: "/logos/email.svg",
     },
     {
