@@ -1,0 +1,242 @@
+.section {
+    padding: 8rem 2rem;
+}
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.labelWrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.labelLine {
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, transparent, var(--border-accent));
+}
+
+.labelLine:last-child {
+    background: linear-gradient(to left, transparent, var(--border-accent));
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+.imgWrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .img {
+    transform: scale(1.05);
+}
+
+.imgOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(4px);
+}
+
+.card:hover .imgOverlay {
+    opacity: 1;
+}
+
+.overlayBtns {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.overlayBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    background: var(--accent);
+    padding: 0.6rem 1.1rem;
+    border-radius: 7px;
+    transition: all 0.2s;
+}
+
+.overlayBtn:hover {
+    background: #33ecff;
+}
+
+.overlayBtnGhost {
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.overlayBtnGhost:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    color: var(--accent);
+}
+
+.body {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 229, 255, 0.07);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.pageBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 0.65rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+    color: var(--accent);
+    border-color: var(--border-accent);
+}
+
+.pageBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.pageDots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.pageDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: all 0.2s;
+    border: none;
+    padding: 0;
+}
+
+.pageDotActive {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 4px;
+}

@@ -1,0 +1,213 @@
+.section {
+    padding: 8rem 2rem 0;
+}
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+.labelWrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.labelLine {
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, var(--border-accent), transparent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.body {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 0.97rem;
+}
+
+.emailBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    background: var(--accent);
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.25s;
+}
+
+.emailBtn:hover {
+    background: #33ecff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.35);
+}
+
+.linksBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    transition: all 0.25s;
+    group: link;
+}
+
+.link:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    transform: translateX(4px);
+}
+
+.linkIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.linkIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.linkInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.linkName {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.linkLabel {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.arrow {
+    color: var(--text-muted);
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.link:hover .arrow {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg-secondary);
+}
+
+.footerInner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footerLogo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.footerLogo span {
+    color: var(--text-muted);
+}
+
+.footerText {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footerText strong {
+    color: var(--text-secondary);
+}
+
+.footerSub {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footerInner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
