@@ -1,4 +1,5 @@
-import StarBackground from './components/StarBackground'
+
+import StarBackground from './components/Starbackground.jsx'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About.jsx'
